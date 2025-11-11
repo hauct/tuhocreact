@@ -6,10 +6,16 @@
 //   );
 // }
 
-function TabButton({ label }) {
+function TabButton({ label, onSelect }) {
+  // js
+  // const btn = document.querySelector("button");
+  // btn.addEventListener("click", () => {
+  //   // Làm việc gì đó
+  // });
+
   return (
     <li>
-      <button>{label}</button>
+      <button onClick={onSelect}>{label}</button>
     </li>
   );
 }

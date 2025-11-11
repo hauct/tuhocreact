@@ -5,6 +5,10 @@ import TabButton from "./components/TabButton";
 import { myData } from "../data";
 
 function App() {
+  function handleSelect(selectedButton) {
+    alert(`Nút bấm được click ${selectedButton}`);
+  }
+
   return (
     <>
       <Header />
@@ -40,11 +44,24 @@ function App() {
         </section>
         <section id="examples">
           <h2>Examples</h2>
+          {/* prettier-ignore */}
           <menu>
-            <TabButton label="Components"></TabButton>
-            <TabButton label="JSX"></TabButton>
-            <TabButton label="Props"></TabButton>
-            <TabButton label="State"></TabButton>
+            <TabButton
+              label="Components"
+              onSelect={() => {handleSelect("components")}}
+            ></TabButton>
+            <TabButton
+              label="JSX"
+              onSelect={() => {handleSelect("jsx")}}
+            ></TabButton>
+            <TabButton
+              label="Props"
+              onSelect={() => {handleSelect("props")}}
+            ></TabButton>
+            <TabButton
+              label="State"
+              onSelect={() => {handleSelect("state")}}
+            ></TabButton>
           </menu>
         </section>
       </main>
