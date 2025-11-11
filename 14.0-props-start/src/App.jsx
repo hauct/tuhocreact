@@ -1,38 +1,8 @@
-import PropTypes from "prop-types";
-import logo from "./assets/logo-tuhoc.png";
+import Header from "./components/Header/Header";
+import MainContent from "./components/MainContent/MainContent";
+import TabButton from "./components/TabButton";
 
 import { myData } from "../data";
-
-function Header() {
-  return (
-    <>
-      <header>
-        <img src={logo} alt="Tự Học" />
-        <h1>React Tuhoc.cc</h1>
-        <p>
-          Học React - Khám phá cách xây dựng ứng dụng linh hoạt, hiện đại, và
-          đầy sáng tạo!
-        </p>
-      </header>
-    </>
-  );
-}
-
-function MainContent({ image, title, desc }) {
-  return (
-    <li>
-      <img src={image} alt={title} />
-      <h2>{title}</h2>
-      <p>{desc}</p>
-    </li>
-  );
-}
-
-MainContent.PropTypes = {
-  image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  desc: PropTypes.string,
-};
 
 function App() {
   return (
@@ -67,6 +37,15 @@ function App() {
               desc={myData[3].desc}
             ></MainContent> */}
           </ul>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <TabButton label="Components"></TabButton>
+            <TabButton label="JSX"></TabButton>
+            <TabButton label="Props"></TabButton>
+            <TabButton label="State"></TabButton>
+          </menu>
         </section>
       </main>
     </>
