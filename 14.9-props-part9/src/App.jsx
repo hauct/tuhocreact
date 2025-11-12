@@ -35,8 +35,8 @@ function App() {
             <TabButton onSelect={()=>{handleSelect('state')}}>State</TabButton>
           </menu>
           <div id="tab-content">
-            <h3>{EXAMPLES.selectedTopic.title}</h3>
-            <p>{EXAMPLES.selectedTopic.desc}</p>
+            <h3>{EXAMPLES[selectedTopic].title}</h3>
+            <p>{EXAMPLES[selectedTopic].desc}</p>
             <pre>
               <code></code>
             </pre>
